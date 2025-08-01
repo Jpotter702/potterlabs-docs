@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { DocsLayout } from "@/components/docs-layout";
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
-import { Home as HomeIcon, FileText, Folder } from "lucide-react";
+import { Home as HomeIcon, FileText, Folder, TrendingUp } from "lucide-react";
 
 export default function HomePage() {
   return (
@@ -105,6 +105,22 @@ export default function HomePage() {
             </CardDescription>
           </CardContent>
         </Card>
+
+        <Link href="/guide/trendit">
+          <Card className="hover:shadow-lg transition-shadow cursor-pointer">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <TrendingUp className="h-5 w-5" />
+                trendit
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <CardDescription>
+                8 items
+              </CardDescription>
+            </CardContent>
+          </Card>
+        </Link>
       </section>
 
       {/* Navigation */}

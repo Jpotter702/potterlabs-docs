@@ -16,6 +16,7 @@ export function DocsLayout({ children }: DocsLayoutProps) {
   const [guideExpanded, setGuideExpanded] = useState(true);
   const [aiCharacterExpanded, setAiCharacterExpanded] = useState(false);
   const [aiStoryExpanded, setAiStoryExpanded] = useState(false);
+  const [trenditExpanded, setTrenditExpanded] = useState(false);
 
   const toggleTheme = () => {
     setIsDark(!isDark);
@@ -132,6 +133,42 @@ export function DocsLayout({ children }: DocsLayoutProps) {
                       </Link>
                       <Link href="/guide/ai-story/story-enhancement" className="block text-xs text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white py-1">
                         Story Enhancement
+                      </Link>
+                    </CollapsibleContent>
+                  </Collapsible>
+
+                  <Collapsible open={trenditExpanded} onOpenChange={setTrenditExpanded}>
+                    <CollapsibleTrigger className="flex items-center justify-between w-full text-left text-sm text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white py-2">
+                      trendit
+                      {trenditExpanded ? <ChevronDown className="h-3 w-3" /> : <ChevronRight className="h-3 w-3" />}
+                    </CollapsibleTrigger>
+                    <CollapsibleContent className="ml-4 space-y-1">
+                      <Link href="/guide/trendit" className="block text-xs text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white py-1">
+                        Overview
+                      </Link>
+                      <Link href="/guide/trendit/search-reddit" className="block text-xs text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white py-1">
+                        Search Reddit
+                      </Link>
+                      <Link href="/guide/trendit/analyze-sentiment" className="block text-xs text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white py-1">
+                        Analyze Sentiment
+                      </Link>
+                      <Link href="/guide/trendit/create-data-store" className="block text-xs text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white py-1">
+                        Create Data Store
+                      </Link>
+                      <Link href="/guide/trendit/monitor-subreddit" className="block text-xs text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white py-1">
+                        Monitor Subreddit
+                      </Link>
+                      <Link href="/guide/trendit/user-analysis" className="block text-xs text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white py-1">
+                        User Analysis
+                      </Link>
+                      <Link href="/guide/trendit/trend-analysis" className="block text-xs text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white py-1">
+                        Trend Analysis
+                      </Link>
+                      <Link href="/guide/trendit/agent-management" className="block text-xs text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white py-1">
+                        Agent Management
+                      </Link>
+                      <Link href="/guide/trendit/export-data" className="block text-xs text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white py-1">
+                        Export Data
                       </Link>
                     </CollapsibleContent>
                   </Collapsible>
